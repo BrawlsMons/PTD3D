@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbs5a74dlw3fq"]
+
+[ext_resource type="Material" uid="uid://d1msqqdue663d" path="res://Models/Materials/1.tres" id="1_8yb27"]
+[ext_resource type="Script" path="res://Scripts/PlacementIndicator.gd" id="2_qg1ed"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3j5ql"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("2_qg1ed")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_8yb27")
+mesh = SubResource("PlaneMesh_3j5ql")

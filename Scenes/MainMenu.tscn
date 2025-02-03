@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr0jcqn1pa86o"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_2s4b2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2s4b2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 644.0
+color = Color(0.290196, 0.364706, 0.384314, 1)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -405.5
+offset_top = -267.0
+offset_right = 405.5
+offset_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = -36.0
+offset_right = -57.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "New Game"
+
+[node name="MapButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 57.0
+offset_top = -36.0
+offset_right = 243.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Choose Map"
+
+[node name="SettingsButton" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -243.0
+offset_top = 124.0
+offset_right = -57.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -213.5
+offset_top = 78.0
+offset_right = 213.5
+offset_bottom = 173.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Pokemon Tower Defence"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/StartButton" to="." method="_on_start_button_pressed"]

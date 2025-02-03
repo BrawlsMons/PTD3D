@@ -1,0 +1,154 @@
+[gd_scene load_steps=9 format=3 uid="uid://cj101bcnbnrty"]
+
+[ext_resource type="Texture2D" uid="uid://c2nc6rek3hmnk" path="res://Maps/MAP1.png" id="1_r7rqs"]
+[ext_resource type="Script" path="res://Scenes/MainGame.gd" id="1_wi52u"]
+[ext_resource type="ArrayMesh" uid="uid://b27xtrlbdvi0y" path="res://Models/Inne/Tree.obj" id="2_aqppy"]
+[ext_resource type="Texture2D" uid="uid://g5x2eeybgbmm" path="res://Models/Inne/Tekstury/Tree.png" id="2_g164v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3l74y"]
+albedo_texture = ExtResource("1_r7rqs")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e6qbw"]
+size = Vector2(1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rprx8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jy3b5"]
+albedo_texture = ExtResource("2_g164v")
+
+[node name="MainGame" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00176048, 0.0094986, -0.134183)
+script = ExtResource("1_wi52u")
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Map"]
+transform = Transform3D(82, 0, 0, 0, 1, 0, 0, 0, 53, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_3l74y")
+mesh = SubResource("PlaneMesh_e6qbw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/StaticBody3D"]
+transform = Transform3D(82, 0, 0, 0, 1, 0, 0, 0, 53, 0, 0, 0)
+shape = SubResource("BoxShape3D_rprx8")
+
+[node name="Camera3D" type="Camera3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0.173648, 0.984808, 0, -0.984808, 0.173648, 0, 248, 45.5)
+fov = 10.0
+
+[node name="Dodatki" type="Node3D" parent="Map"]
+
+[node name="Tree" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -38.446, 6.72075, -23.7578)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree2" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -32.8866, 6.72075, -23.7578)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree3" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -38.446, 6.72075, -19.1653)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree4" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -29.2609, 6.72075, -25.2081)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree5" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -39.3323, 6.72075, -25.2081)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree6" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -34.3369, 6.72075, -25.2081)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree7" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 26.6504, 6.72075, -26.9981)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree8" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 32.7875, 6.72075, -26.3588)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree9" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 32.7875, 6.72075, -21.8839)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree10" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 38.4131, 6.72075, -21.8839)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree11" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 38.4131, 6.72075, -26.8702)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree12" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 38.4131, 6.72075, -20.0939)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree13" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 38.4131, 6.72075, 22.3543)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree14" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 34.066, 6.72075, 22.3543)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree15" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 29.4632, 6.72075, 22.3543)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree16" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 39.1803, 6.72075, 16.4729)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree17" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 39.1803, 6.72075, 10.208)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree18" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 35.856, 6.72075, 15.7058)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
+
+[node name="Tree19" type="MeshInstance3D" parent="Map/Dodatki"]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 32.5318, 6.72075, 15.7058)
+material_override = SubResource("StandardMaterial3D_jy3b5")
+mesh = ExtResource("2_aqppy")
+skeleton = NodePath("../..")
